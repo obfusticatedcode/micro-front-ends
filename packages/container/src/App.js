@@ -56,7 +56,6 @@ const App = () => {
                 {!isSignedIn && <Redirect to="/" />}
                 <DashboardLazy />
               </Route>
-
               <Route path="/" component={MarketingAppLazy} />
             </Switch>
           </Suspense>
