@@ -26,7 +26,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
 
 // in local dev mode, call mount immediately
 if (process.env.NODE_ENV === "development") {
-  const devRoot = document.querySelector("#_marketing-dev-root");
+  const devRoot = document.querySelector("#_auth-dev-root");
 
   if (devRoot) {
     mount(devRoot, { defaultHistory: createBrowserHistory() });
