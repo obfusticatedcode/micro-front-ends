@@ -8,15 +8,9 @@ import {
 import { CircularProgress } from "@material-ui/core";
 import { createBrowserHistory } from "history";
 
-const MarketingAppLazy = lazy(() =>
-  import("./components/MarketingApp").catch((err) => console.log(err))
-);
-const AuthAppLazy = lazy(() =>
-  import("./components/AuthApp").catch((err) => console.log(err))
-);
-const DashboardLazy = lazy(() =>
-  import("./components/DashboardApp").catch((err) => console.log(err))
-);
+const MarketingAppLazy = lazy(() => import("./components/MarketingApp"));
+const AuthAppLazy = lazy(() => import("./components/AuthApp"));
+const DashboardLazy = lazy(() => import("./components/DashboardApp"));
 
 const generateClassName = createGenerateClassName({ productionPrefix: "co" });
 
