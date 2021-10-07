@@ -6,7 +6,7 @@ import App from "./App";
 // call mount to start the app
 const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
   const history =
-    defaultHistory ?? createMemoryHistory({ initialEntries: [initialPath] });
+    defaultHistory || createMemoryHistory({ initialEntries: [initialPath] });
 
   if (onNavigate) {
     history.listen(onNavigate);
